@@ -1,0 +1,9 @@
+{
+  "name": "myligo-identity-operations",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise identity-resolution operations concept",
+  "scripts": {"test": "node qa.js"},
+  "license": "UNLICENSED",
+  "dependencies": {"playwright": "^1.62.1"}
+}
