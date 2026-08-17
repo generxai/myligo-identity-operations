@@ -53,7 +53,7 @@ const path = require('path');
     !initial.caseText.includes('v2.4') &&
     initial.caseText.includes('04/09/1978') &&
     initial.caseText.includes('09/04/1978');
-  const stateOk=approved.keepSeparateDisabled && approved.escalateDisabled && approved.statusAfterContradictoryAttempts.includes('Merge approved');
+  const stateOk=approved.keepSeparateDisabled && approved.escalateDisabled && approved.keepSeparateLabel.trim()==='Keep separate' && approved.escalateLabel.trim()==='Escalate' && approved.statusAfterContradictoryAttempts.includes('Merge approved');
   if(errors.length || initial.rows!==8 || !approved.banner || !newestAudit.includes('Merge approved') || !copyOk || !stateOk) process.exitCode=1;
   await browser.close();
 })();
